@@ -1,0 +1,15 @@
+{
+    "name"    : "TagsAudio-client",
+    "version" : "0.0.0",
+    "description": "Node-webkit client for TagsAudio service",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/RemRyahirev/TagsAudio-client.git"
+    },
+    "engines" : {
+        "node" : "^0.10.26",
+        "npm" : "^1.4.3"
+    },
+    "author": "RemRyahiev",
+    "license": "BSD"
+}
