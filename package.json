@@ -1,15 +1,73 @@
 {
-    "name"    : "TagsAudio-client",
-    "version" : "0.0.0",
-    "description": "Node-webkit client for TagsAudio service",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/RemRyahirev/TagsAudio-client.git"
-    },
-    "engines" : {
-        "node" : "^0.10.26",
-        "npm" : "^1.4.3"
-    },
-    "author": "RemRyahiev",
-    "license": "BSD"
+  "nodejs": true,
+  "additional_trust_anchors": "",
+  "inject-js-end": "",
+  "node-remote": "",
+  "keywords": [],
+  "devDependencies": {
+    "grunt-shell": "^1.1.1",
+    "grunt-contrib-compress": "^0.13.0"
+  },
+  "engines": {
+    "node": "^0.10.26",
+    "npm": "^1.4.3"
+  },
+  "author": "RemRyahiev",
+  "user-agent": "",
+  "window": {
+    "fullscreen": false,
+    "resizable": false,
+    "title": "TagAudio",
+    "always-on-top": false,
+    "frame": true,
+    "visible": true,
+    "height": 600,
+    "exe_icon": "",
+    "width": 800,
+    "as_desktop": false,
+    "position": "center",
+    "show_in_taskbar": true,
+    "mac_icon": "",
+    "transparent": false,
+    "toolbar": true,
+    "icon": ""
+  },
+  "version": "0.0.1",
+  "inject-js-start": "",
+  "main": "index.html",
+  "chromium-args": "",
+  "webexe_settings": {
+    "linux-x32": false,
+    "windows-x64": true,
+    "download_dir": "c:\\\\Node\\\\Web2ExeWin\\\\files\\\\downloads",
+    "nw_compression_level": 5,
+    "mac-x32": false,
+    "windows-x32": false,
+    "mac-x64": false,
+    "nw_version": "0.11.6",
+    "force_download": false,
+    "linux-x64": false
+  },
+  "description": "Node-webkit client for TagsAudio service",
+  "repository": {
+    "url": "https://github.com/RemRyahirev/TagsAudio-client.git",
+    "type": "git"
+  },
+  "dependencies": {
+    "async": "^0.9.0",
+    "iconv-lite": "^0.4.7",
+    "jschardet": "^1.1.0",
+    "mp3-parser": "^0.2.5"
+  },
+  "webkit": {
+    "page-cache": false,
+    "java": false,
+    "plugin": false
+  },
+  "js-flags": "",
+  "name": "TagsAudio-client",
+  "license": "BSD",
+  "single-instance": true,
+  "snapshot": "",
+  "node-main": ""
 }

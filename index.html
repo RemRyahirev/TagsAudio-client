@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>TagsAudio</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">TagsAudio</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><i class="fa fa-question-circle"></i> Help</a></li>
+                <li><a href="javascript: exitApplication();"><i class="fa fa-sign-out"></i> Exit</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <ul class="nav nav-sidebar">
+                <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+            </ul>
+        </div>
+
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <form class="form-inline" action="">
+                <div id="directories" class="form-group" style="width: 80%">
+                        <label for="path" class="center-block">Directories:</label>
+                        <ul class="list-group" id="pathList">
+                            <li class="list-group-item">Aaa</li>
+                            <li class="list-group-item">Bbb</li>
+                        </ul>
+                </div>
+
+                <div id="button-col" class="form-group">
+                    <div class="btn-group-vertical" role="group">
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#addDirectory"><i class="fa fa-plus"></i> Add</button>
+                        <button type="button" class="btn btn-default" id="btnRemoveDirectory"><i class="fa fa-minus"></i> Remove</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div id="buttons" class="text-center">
+            <button type="submit" class="btn btn-primary btn-lg" id="btnSynchronize"><i class="fa fa-refresh"></i> Synchronize</button>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row hide" id="progressRow">
+        <div class="col-sm-8 col-sm-offset-2">
+            <h4>Initing...</h4>
+            <div class="progress">
+                <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em;">
+                    0%
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="addDirectory" tabindex="-1" role="dialog" aria-labelledby="addDirectoryLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="addDirectoryLabel">Add directory</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="addDirectoryPath" class="control-label">Path:</label>
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <span class="btn btn-primary btn-file">
+                                        <i class="fa fa-folder-open-o"></i> Browse <input type="file" id="addDirectoryPath" nwdirectory>
+                                    </span>
+                                </span>
+
+                                <input class="form-control" type="text" readonly>
+
+                                <div id="response"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="btnAddDirectory">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
